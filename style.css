@@ -1,0 +1,58 @@
+p{
+	font-size: 1.5rem;
+}
+form{
+	background-color:peachpuff ;
+	margin: auto;
+	padding:5% 14% 5% 6% ;
+	width: 13%;
+}
+#username{
+	padding: 3%;
+	border-radius: 2px;
+	background-color: whitesmoke;
+	font-size: 1em;
+}
+#email{
+	padding: 3%;
+	border-radius: 2px;
+	background-color: whitesmoke;
+	font-size: 1em;
+}
+#mobilenumber{
+	padding: 3%;
+	border-radius: 2px;
+	background-color: whitesmoke;
+	font-size: 1em;
+}
+#pwd{
+	padding: 3%;
+	border-radius: 2px;
+	background-color: whitesmoke;
+	font-size: 1em;
+}
+#fradio{
+  color: red;
+  font-size: 1rem;
+}
+#mradio{
+	color: red;
+  font-size: 1rem;
+}
+#option{
+	padding: 4%;
+	border-radius: 2px;
+	background-color: whitesmoke;
+	font-size: 1.5em;
+}
+#address{
+	background-color:whitesmoke ;
+	border-radius: 2px;
+	font-size: 1rem;
+	padding: 1%;
+}
+#button{
+	padding: 10%;
+	border:none;
+	border-radius: 2px;
+}

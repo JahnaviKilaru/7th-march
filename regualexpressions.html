@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head><script src="https://kit.fontawesome.com/215d5ce33b.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function validation(){
+			var username=document.getElementById("username").value
+			var email=document.getElementById("email").value
+			var mobilenumber=document.getElementById("mobilenumber").value
+			var pwd=document.getElementById("pwd").value
+			function display(){
+			/*var pwd=document.getElementById("pwd");
+			console.log(pwdCheck.type)*/
+			/*if(pwdCheck.type=="password"){
+				var s=pwdCheck.setAttribute("type","text")
+				pwdCheck.append(s)
+				document.getElementById("btn").innerHTML=`<i class="fa-solid fa-eye"></i>`
+			}
+			else{
+				var s=pwdCheck.setAttribute("type","pwd")
+				pwdCheck.append(s)
+				document.getElementById("btn").innerHTML=`<i class="fa-solid fa-eye-slash">`
+			}
+		}*/
+
+			var fradio=document.getElementById("fradio");
+			var mradio=document.getElementById("mradio");
+			var gender=fradio.checked?gender="Female":gender="Male";
+			var optionDrop=document.getElementById("option").value
+			var comments=document.getElementById("comments").value
+			var inforcheckbox=document.getElementById("inforcheckbox");
+			var noncheckbox=document.getElementById("noncheckbox");
+			var information=inforcheckbox.checked?information="js":information="css"
+		      var usernameCheck=/^[a-zA-Z]+$/
+		      var mobilenumberCheck=/^[6-9][0-9]{9}$/
+		      var pwdCheck=/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@!%]).{8}$/
+		      var emailCheck=/^[a-zA-Z0-9#*!&]+@[a-zA-Z]+\.[a-z]{2,3}$/
+			if(username=="" ||username.length<3){
+				alert("please Enter username")
+				return false
+			}
+			if(!username.match(usernameCheck)){
+				alert("Number must carry only characters ")
+				return false
+			}
+			if(email==""){
+				alert("please Enter you email")
+				return false
+			}
+			if(!email.match(emailCheck)){
+				alert("please check your what you given email")
+				return false
+			}	
+			if(mobilenumber==""){
+				alert("please Enter your conactnumber")
+				return false
+			}
+			if(!mobilenumber.match(mobilenumberCheck)){
+				alert("conactnumber must 10 digits")
+				return false
+			}
+			if(pwd==""){
+				alert("please enter your password")
+				return false
+				else if(pwdCheck.type=="password"){
+				var s=pwdCheck.setAttribute("type","text")
+				pwdCheck.append(s)
+				document.getElementById("btn").innerHTML=`<i class="fa-solid fa-eye"></i>`
+			}
+			else{
+				var s=pwdCheck.setAttribute("type","pwd")
+				pwdCheck.append(s)
+				document.getElementById("btn").innerHTML=`<i class="fa-solid fa-eye-slash">`
+			}
+		}
+			}
+			if(!pwd.match(pwdCheck)){
+				alert("please create your password strongly")
+			}
+			if(fradio.checked==false&&mradio.check==false){
+				alert("please enter your gender")
+				return false
+			}
+			console.log(gender)
+			if(inforcheckbox.checked==false&&noncheckbox.checked==false){
+				alert("please enter your checkbox's")
+				return false
+			}
+			console.log(information)
+
+			/*return true*/
+			if(optionDrop=="select your option"){
+			   alert("please select your option")
+			   return false	
+			}
+			if(comments==""||comments.length<=3){
+				alert("comments must be enter please check onces")
+				return false
+			}
+			return true
+
+		}
+	</script>
+</head>
+<body>
+	<form onsubmit="return validation()">
+		<p>Restration Form</p>
+		<p><input type="text" placeholder="username" id="username"></p>
+		<p><input placeholder="email" id="email"></p>
+		<p><input  placeholder="MobileNumber"id="mobilenumber" /></p>
+		<p><input type="password" placeholder="password" id="pwd">
+			<span id="btn" onclick="display()"> 
+			<i class="fa-solid fa-eye-slash"></i>
+		</span></p>
+		<input type="radio" name="gender" value="Female" id="fradio">Female
+		<input type="radio" name="gender" value="Male" id="mradio">Male
+		<p><input type="checkbox" name="information" value="js" id="inforcheckbox">js
+		<input type="checkbox" name="non-information" value="css" id="noncheckbox">css</p>
+		<select id="option" name="Select your option">
+			<option>select your option</option>
+			<option>Eng</option>
+			<option>Hin</option>
+			<option>Tamil</option>
+		</select>
+		<p><textarea placeholder="Address" id="comments" rows="4"></textarea></p>
+		<p><button id="button">submit</button></p>
+	</form>
+
+</body>
+</html>
+<!-- function display(){
+			var passwordData=document.getElementById("password");
+			console.log(passwordData.type)
+			if(passwordData.type=="password"){
+				var s=passwordData.setAttribute("type","text")
+				passwordData.append(s)
+				document.getElementById("btn").innerHTML=`<i class="fa-solid fa-eye"></i>`
+			}
+			else{
+				var s=passwordData.setAttribute("type","password")
+				passwordData.append(s)
+				document.getElementById("btn").innerHTML=`<i class="fa-solid fa-eye-slash">`
+			}
+		}
+ -->
